@@ -26,6 +26,11 @@
       "types": "./dist/exports/vite.d.ts",
       "require": "./dist/vite.cjs",
       "import": "./dist/vite.mjs"
+    },
+    "./webpack": {
+      "types": "./dist/exports/webpack.d.ts",
+      "require": "./dist/webpack.cjs",
+      "import": "./dist/webpack.mjs"
     }
   },
   "main": "dist/index.cjs",
@@ -50,7 +55,8 @@
     "**/**/*.{js,ts,tsx,vue,json}": ["eslint --fix"]
   },
   "peerDependencies": {
-    "vite": "^3 || ^4"
+    "vite": "^3 || ^4",
+    "webpack": "^5"
   },
   "dependencies": {
     "@rollup/pluginutils": "^5.0.2",
@@ -82,11 +88,13 @@
     "typescript": "4.4.3",
     "typescript-transform-paths": "3.3.1",
     "vite": "^4.3.2",
-    "vitest": "0.10.0"
+    "vitest": "0.10.0",
+    "webpack": "^5.80.0"
   },
   "typesVersions": {
     "*": {
-      "vite": ["dist/exports/vite.d.ts"]
+      "vite": ["dist/exports/vite.d.ts"],
+      "webpack": ["dist/exports/webpack.d.ts"]
     }
   }
 }
