@@ -1,6 +1,7 @@
 {
-  "name": "@aiou/react-template",
+  "name": "webpack-template",
   "version": "2.1.0",
+  "private": true,
   "description": "React template",
   "license": "MIT",
   "homepage": "https://github.com/spring-catponents/react-template#readme",
