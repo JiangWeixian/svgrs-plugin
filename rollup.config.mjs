@@ -50,8 +50,8 @@ export default defineConfig([
       exclude: ['package.json'],
     },
     output: [
-      { dir: 'dist', entryFileNames: '[name].cjs', format: 'cjs' },
-      { dir: 'dist', entryFileNames: '[name].mjs', format: 'es' },
+      { dir: 'dist', entryFileNames: '[name].cjs', chunkFileNames: '[name].cjs', format: 'cjs' },
+      { dir: 'dist', entryFileNames: '[name].mjs', chunkFileNames: '[name].mjs', format: 'es' },
     ],
   },
 ])

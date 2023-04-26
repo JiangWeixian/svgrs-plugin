@@ -1,6 +1,6 @@
 import './App.css'
 
-import ReactLogo from './assets/react.svg?react'
+import { ReactComponent as ReactLogo } from './assets/react.svg?react'
 
 const App = () => {
   return (

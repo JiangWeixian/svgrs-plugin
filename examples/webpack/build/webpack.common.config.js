@@ -53,6 +53,7 @@ const common = {
             loader: 'svgrs-plugin/webpack',
             options: {
               exportType: 'named',
+              namedExport: 'ReactComponent',
             },
           },
         ],

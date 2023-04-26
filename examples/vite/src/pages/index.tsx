@@ -1,9 +1,9 @@
-import ReactLogo from '../assets/react.svg'
+import reactLogo, { ReactComponent as ReactLogo } from '../assets/react.svg'
 
 const Home = () => {
   return (
     <div>
-      <img src={ReactLogo} />
+      <img src={reactLogo} />
       <ReactLogo />
     </div>
   )

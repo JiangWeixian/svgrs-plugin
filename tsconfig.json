@@ -5,6 +5,7 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "esModuleInterop": true,
+    "skipLibCheck": true,
     "sourceMap": true,
     "declarationDir": "dist",
     "emitDeclarationOnly": true,

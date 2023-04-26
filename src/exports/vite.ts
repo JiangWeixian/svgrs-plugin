@@ -4,6 +4,8 @@ import { createFilter } from '@rollup/pluginutils'
 import { transform } from '@svgr-rs/core'
 import { transformWithEsbuild } from 'vite'
 
+import { patchNamed } from '../patch'
+
 import type { Config } from '@svgr-rs/core'
 import type { Plugin } from 'vite'
 
@@ -32,8 +34,7 @@ export const svgrs = ({
     async transform(code, id) {
       if (filter(cleanUrl(id))) {
         const raw = await fs.readFile(cleanUrl(id), 'utf-8')
-        // TODO: Config looks like not support yet..
-        const svgrsCode = await transform(
+        let svgrsCode = await transform(
           raw,
           { namedExport, exportType, jsxRuntime, icon, ...config },
           {
@@ -41,9 +42,14 @@ export const svgrs = ({
             filePath: id,
             caller: {
               previousExport: code,
+              name: 'svgrs-plugin/vite',
             },
           },
         )
+        // Config looks like not support yet..
+        if (exportType === 'named') {
+          svgrsCode = patchNamed(svgrsCode, code, { componentName: namedExport })
+        }
         const result = await transformWithEsbuild(svgrsCode, id, {
           loader: 'jsx',
         })
