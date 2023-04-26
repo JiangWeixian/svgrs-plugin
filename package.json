@@ -20,12 +20,13 @@
     "email": "jiangweixian1994@gmail.com",
     "url": "https://twitter.com/jiangweixian"
   },
+  "files": ["dist"],
   "exports": {
     "./package.json": "./package.json",
-    "./inedx": {
-      "types": "./dist/exports/inedx.d.ts",
-      "require": "./dist/inedx.cjs",
-      "import": "./dist/inedx.mjs"
+    ".": {
+      "types": "./dist/exports/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
     },
     "./vite": {
       "types": "./dist/exports/vite.d.ts",
@@ -40,13 +41,14 @@
   },
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
+  "types": "dist/exports/index.d.ts",
   "scripts": {
     "build:lib": "rollup -c --silent",
     "build:dts": "ttsc",
     "build": "rimraf dist && run-p build:*",
     "dev": "rollup -c -w",
     "test": "vitest",
+    "prepublishOnly": "publish-police",
     "pretest": "pnpm run build",
     "release": "pnpm run build && np --no-cleanup --yolo --no-publish --any-branch",
     "ci:version": "pnpm changeset version",
@@ -100,7 +102,6 @@
   },
   "typesVersions": {
     "*": {
-      "inedx": ["dist/exports/inedx.d.ts"],
       "vite": ["dist/exports/vite.d.ts"],
       "webpack": ["dist/exports/webpack.d.ts"]
     }

@@ -19,6 +19,7 @@ importers:
       husky: 7.0.4
       lint-staged: 11.2.6
       npm-run-all: ^4.1.5
+      publish-police: ^0.0.3
       rimraf: 3.0.2
       rollup: 3.19.1
       rollup-plugin-condition-exports: 2.0.0-next.3
@@ -50,6 +51,7 @@ importers:
       husky: 7.0.4
       lint-staged: 11.2.6
       npm-run-all: 4.1.5
+      publish-police: 0.0.3
       rimraf: 3.0.2
       rollup: 3.19.1
       rollup-plugin-condition-exports: 2.0.0-next.3
@@ -5252,6 +5254,11 @@ packages:
     engines: {node: '>= 0.8'}
     dev: true
 
+  /cac/6.7.14:
+    resolution: {integrity: sha512-b6Ilus+c3RrdDk+JhLKUAQfzzgLEPy6wcXqS7f/xe1EETvsDP6GORG7SFuOs6cID5YkqchW/LXZbX5bc8j7ZcQ==}
+    engines: {node: '>=8'}
+    dev: true
+
   /cacache/15.3.0:
     resolution: {integrity: sha512-VVdYzXEn+cnbXpFgWs5hTT7OScegHVmLhJIR8Ufqk3iFD6A6j5iSX1KuBTfNEv4tdJWE2PzA6IVFtcLC7fN9wQ==}
     engines: {node: '>= 10'}
@@ -9346,6 +9353,17 @@ packages:
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dependencies:
       array-union: 3.0.1
+      dir-glob: 3.0.1
+      fast-glob: 3.2.12
+      ignore: 5.2.4
+      merge2: 1.4.1
+      slash: 4.0.0
+    dev: true
+
+  /globby/13.1.4:
+    resolution: {integrity: sha512-iui/IiiW+QrJ1X1hKH5qwlMQyv34wJAYwH1vrf8b9kBA4sNiif3gKsMHa+BrdnOpEudWjpotfa7LrTzB1ERS/g==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dependencies:
       dir-glob: 3.0.1
       fast-glob: 3.2.12
       ignore: 5.2.4
@@ -14059,6 +14077,16 @@ packages:
 
   /psl/1.9.0:
     resolution: {integrity: sha512-E/ZsdU4HLs/68gYzgGTkMicWTLPdAftJLfJFlLUAAKZGkStNU72sZjT66SnMDVOfOWY/YAoiD7Jxa9iHvngcag==}
+    dev: true
+
+  /publish-police/0.0.3:
+    resolution: {integrity: sha512-s+4ST49ErLLXoFNc+DWv1U9Y2+kKOrvbFLAPNc/H1v1wOujbLi9FjDJbvfN/zfm9P63HG6G0XNWARJ1ioeJUfw==}
+    engines: {node: '>=14'}
+    hasBin: true
+    dependencies:
+      cac: 6.7.14
+      consola: 2.15.3
+      globby: 13.1.4
     dev: true
 
   /pump/3.0.0:
