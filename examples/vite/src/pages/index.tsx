@@ -1,9 +1,10 @@
-import reactLogo from '../assets/react.svg'
+import ReactLogo from '../assets/react.svg'
 
 const Home = () => {
   return (
     <div>
-      <img src={reactLogo} />
+      <img src={ReactLogo} />
+      <ReactLogo />
     </div>
   )
 }
