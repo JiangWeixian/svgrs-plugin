@@ -45,7 +45,7 @@ async function svgrsLoader(this: LoaderContext<Config>, source: string) {
   } else {
     const content = await fs.readFile(this.resourcePath, 'utf-8')
     let code = await transform(content, options, state)
-    // Config looks like not support yet..
+    // namedExport Config looks like not support yet..
     code = patchNamed(code, previousExport, { componentName: options.namedExport ?? 'ReactComponent' })
     callback(null, code)
   }

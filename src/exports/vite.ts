@@ -46,7 +46,7 @@ export const svgrs = ({
             },
           },
         )
-        // Config looks like not support yet..
+        // namedExport Config looks like not support yet..
         if (exportType === 'named') {
           svgrsCode = patchNamed(svgrsCode, code, { componentName: namedExport })
         }
