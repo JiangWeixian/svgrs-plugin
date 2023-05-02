@@ -2,6 +2,8 @@
 
 [![npm](https://img.shields.io/npm/v/svgrs-plugin)](https://github.com/JiangWeixian/svgrs-plugin) [![GitHub](https://img.shields.io/npm/l/svgrs-plugin)](https://github.com/JiangWeixian/svgrs-plugin)
 
+Use [svgr-rs](https://github.com/svg-rust/svgr-rs) with vite and webpack.
+
 ## install
 
 ```console
