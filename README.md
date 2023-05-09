@@ -1,3 +1,6 @@
+> **💡 NOTE**  
+Please use <https://github.com/svg-rust/svgrs-plugin>
+
 # svgrs-plugin
 
 [![npm](https://img.shields.io/npm/v/svgrs-plugin)](https://github.com/JiangWeixian/svgrs-plugin) [![GitHub](https://img.shields.io/npm/l/svgrs-plugin)](https://github.com/JiangWeixian/svgrs-plugin)
